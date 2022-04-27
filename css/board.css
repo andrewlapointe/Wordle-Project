@@ -1,0 +1,29 @@
+#board-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+tile {
+  width: 70px;
+  height: 70px;
+  border: 2px black dotted;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
