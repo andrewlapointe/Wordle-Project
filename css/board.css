@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
+  margin-top: 120px;
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +24,7 @@
 tile {
   width: 70px;
   height: 70px;
-  border: 2px black dotted;
+  border: 2px grey dotted;
   margin-top: 2.5px;
   margin-bottom: 2.5px;
 }
