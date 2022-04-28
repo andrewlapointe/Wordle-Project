@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/board.css" />
     <link rel="stylesheet" href="css/keyboard.css" />
+    <link rel="stylesheet" href="css/snackbar.css" />
     <title>Wordle</title>
   </head>
   <header>
@@ -113,19 +114,7 @@
     </div>
     <!-- The actual snackbar -->
     <div id="snackbar">Sorry! This form doesn't work yet.</div>
-    <script>
-      function snackbar() {
-        // Get the snackbar DIV
-        var x = document.getElementById("snackbar");
-
-        // Add the "show" class to DIV
-        x.className = "show";
-
-        // After 3 seconds, remove the show class from DIV
-        setTimeout(function () {
-          x.className = x.className.replace("show", "");
-        }, 3000);
-      }
-    </script>
+    <script src="js/snackbar.js"></script>
+    <!-- async? -->
   </body>
 </html>
