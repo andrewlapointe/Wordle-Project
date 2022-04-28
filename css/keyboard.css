@@ -1,0 +1,30 @@
+#keyboard-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+tile {
+  width: 20px;
+  height: 20px;
+  border: 2px grey dotted;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
