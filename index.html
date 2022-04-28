@@ -104,7 +104,14 @@
           class="keyboard-row"
           style="grid-template-columns: 1.5fr repeat(7, 1fr) 1.5fr"
         >
-          <button class="key" style="width: auto">Enter</button>
+          <button
+            id="enter-key"
+            class="key"
+            style="width: auto"
+            onclick="snackbar(1);"
+          >
+            Enter
+          </button>
           <button class="key">Z</button>
           <button class="key">X</button>
           <button class="key">C</button>
@@ -117,7 +124,7 @@
       </div>
     </div>
     <!-- The actual snackbar -->
-    <div id="snackbar">Sorry! This form doesn't work yet.</div>
+    <div id="snackbar"></div>
     <script src="js/snackbar.js"></script>
     <!-- async? -->
   </body>

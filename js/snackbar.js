@@ -1,7 +1,13 @@
-function snackbar() {
+function snackbar(a) {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
 
+  // Change the HTML text
+  if (a === 1) {
+    x.innerHTML = "You can't enter yet!";
+  } else {
+    x.innerHTML = "Sorry! This form doesn't work yet.";
+  }
   // Add the "show" class to DIV
   x.className = "show";
 
