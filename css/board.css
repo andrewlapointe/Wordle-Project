@@ -27,4 +27,10 @@ tile {
   border: 2px grey dotted;
   margin-top: 2.5px;
   margin-bottom: 2.5px;
+  text-align: center;
+  /* color: white; */
+}
+
+.cover {
+  background-color: blue;
 }

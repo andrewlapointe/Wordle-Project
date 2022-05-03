@@ -29,46 +29,46 @@
     <div id="board-container">
       <div id="board">
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile1"></tile>
+          <tile id="tile2"></tile>
+          <tile id="tile3"></tile>
+          <tile id="tile4"></tile>
+          <tile id="tile5"></tile
         ></game-row>
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile6"></tile>
+          <tile id="tile7"></tile>
+          <tile id="tile8"></tile>
+          <tile id="tile9"></tile>
+          <tile id="tile10"></tile
         ></game-row>
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile11"></tile>
+          <tile id="tile12"></tile>
+          <tile id="tile13"></tile>
+          <tile id="tile14"></tile>
+          <tile id="tile15"></tile
         ></game-row>
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile16"></tile>
+          <tile id="tile17"></tile>
+          <tile id="tile18"></tile>
+          <tile id="tile19"></tile>
+          <tile id="tile20"></tile
         ></game-row>
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile21"></tile>
+          <tile id="tile22"></tile>
+          <tile id="tile23"></tile>
+          <tile id="tile24"></tile>
+          <tile id="tile25"></tile
         ></game-row>
         <game-row class="game-row">
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile>
-          <tile></tile
+          <tile id="tile26"></tile>
+          <tile id="tile27"></tile>
+          <tile id="tile28"></tile>
+          <tile id="tile29"></tile>
+          <tile id="tile30"></tile
         ></game-row>
       </div>
     </div>
@@ -90,7 +90,7 @@
           <button class="key">P</button>
         </div>
         <div class="keyboard-row" style="grid-template-columns: repeat(9, 1fr)">
-          <button class="key">A</button>
+          <button class="key" onclick="cover('a')">A</button>
           <button class="key">S</button>
           <button class="key">D</button>
           <button class="key">F</button>
@@ -126,6 +126,7 @@
     <!-- The actual snackbar -->
     <div id="snackbar"></div>
     <script src="js/snackbar.js"></script>
+    <script src="js/keyboard.js"></script>
     <!-- async? -->
   </body>
 </html>
