@@ -5,6 +5,8 @@ function snackbar(a) {
   // Change the HTML text
   if (a === 1) {
     x.innerHTML = "You can't enter yet!";
+  } else if (a === 2) {
+    x.innerHTML = "Press enter to check the row!";
   } else {
     x.innerHTML = "Sorry! This form doesn't work yet.";
   }

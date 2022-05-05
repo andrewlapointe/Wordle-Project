@@ -26,17 +26,20 @@
 }
 
 tile {
+  display: flex;
   width: 60px;
   height: 60px;
   border: 2px grey dotted;
   margin-top: 2.5px;
   margin-bottom: 2.5px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
   /* color: white; */
 }
 
 .cover {
-  background-color: blue;
+  background-color: white;
 }
 
 .color-red {

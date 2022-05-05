@@ -24,19 +24,23 @@ function cover(letter) {
 }
 
 function getCurrentTile() {
-  if (currentTile < 30) {
+  if (currentTile < 30 && currentRow.length != 5) {
     currentTile++;
     return "tile" + currentTile;
-  } else {
-    currentTile = 1;
-    return "tile" + currentTile;
+
+    //   } else {
+    //     currentTile = 1;
+    //     return "tile" + currentTile;
   }
 }
 
 function getCurrentTilePos() {
-  if (currentTile < 5) {
+  if (currentTile < 5 && currentRow.length != 5) {
     currentTilePos++;
     return currentTilePos;
+  } else if (currentTile < 5 && currentRow.length == 5) {
+    snackbar(2);
+    return;
   } else {
     currentTilePos = 1;
     return currentTilePos;
@@ -58,6 +62,9 @@ function showRow() {
   if (4 in currentRow) {
     let root = document.querySelector(":root");
     root.style.setProperty("--opacity", 1);
+    currentRow = [];
+  } else {
+    snackbar(1);
   }
 }
 
