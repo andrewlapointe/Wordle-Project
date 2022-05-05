@@ -1,5 +1,6 @@
 currentTile = 0;
 currentTilePos = 0;
+currentRow = [];
 
 const secretWords = ["JAZZY", "OTHER", "THERE"];
 let secretWord = secretWords[Math.floor(Math.random() * secretWords.length)];
@@ -7,6 +8,15 @@ console.log(secretWord);
 
 function cover(letter) {
   tile = document.getElementById(getCurrentTile());
+  if (4 in currentRow) {
+    snackbar(2);
+    console.log(currentRow);
+    return;
+  } else {
+    currentRow.push(letter);
+    tile.classList.add("cover");
+    console.log(currentRow);
+  }
   color = getTileColor(letter);
   tile.classList.add("cover", color);
   tile.innerHTML = letter;
@@ -41,6 +51,13 @@ function getTileColor(guess) {
     return "color-yellow";
   } else {
     return "color-red";
+  }
+}
+
+function showRow() {
+  if (4 in currentRow) {
+    let root = document.querySelector(":root");
+    root.style.setProperty("--opacity", 1);
   }
 }
 

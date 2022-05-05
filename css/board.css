@@ -1,3 +1,7 @@
+:root {
+  --opacity: 0;
+}
+
 #board-container {
   display: flex;
   flex-direction: column;
@@ -36,13 +40,13 @@ tile {
 }
 
 .color-red {
-  background-color: red;
+  background: rgba(255, 0, 0, var(--opacity)); /*  0% opaque red */
 }
 
 .color-yellow {
-  background-color: yellow;
+  background: rgba(255, 255, 0, var(--opacity)); /*  0% opaque yellow */
 }
 
 .color-green {
-  background-color: green;
+  background: rgba(0, 255, 0, var(--opacity)); /*  0% opaque green */
 }
