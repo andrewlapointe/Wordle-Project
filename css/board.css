@@ -1,3 +1,7 @@
+:root {
+  --opacity: 0;
+}
+
 #board-container {
   display: flex;
   flex-direction: column;
@@ -13,6 +17,7 @@
   margin: auto;
   justify-content: center;
   align-items: center;
+  grid-template-rows: repeat(6, 1fr);
 }
 
 .game-row {
@@ -22,27 +27,19 @@
 }
 
 tile {
+  display: flex;
   width: 60px;
   height: 60px;
   border: 2px grey dotted;
   margin-top: 2.5px;
   margin-bottom: 2.5px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+  z-index: 2;
   /* color: white; */
 }
 
 .cover {
-  background-color: blue;
-}
-
-.color-red {
-  background-color: red;
-}
-
-.color-yellow {
-  background-color: yellow;
-}
-
-.color-green {
-  background-color: green;
+  background-color: white;
 }
