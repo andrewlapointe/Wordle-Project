@@ -57,11 +57,7 @@ function getTileColor(guess) {
   }
 }
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function showRow() {
+function showRow() {
   // This is the entry point for the ENTER key.
   if (4 in currentRow) {
     for (i = 0; i < 5; i++) {
@@ -72,9 +68,7 @@ async function showRow() {
     }
     if (greenCounter === 5) {
       console.log("yay");
-      snackbar(3);
-      await sleep(4000);
-      window.location.reload();
+      menu();
     }
     currentRow = [];
     idCache = [];

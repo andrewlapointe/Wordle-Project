@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/board.css" />
     <link rel="stylesheet" href="css/keyboard.css" />
     <link rel="stylesheet" href="css/snackbar.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <title>Wordle</title>
   </head>
   <header>
@@ -130,11 +131,15 @@
         </div>
       </div>
     </div>
-    <!-- The actual snackbar -->
+    <div id="menu">
+      <p>You Solved it. Congratulations!!!</p>
+      <button class="menu-button" onclick="reload()">New Game</button>
+    </div>
     <div id="snackbar"></div>
     <script src="js/snackbar.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/keyboard.js"></script>
-    <!-- <script type="module" src="js/secretWords.js"></script> -->
+    <script type="module" src="js/secretWords.js"></script>
     <!-- async? -->
   </body>
 </html>
