@@ -1,36 +1,34 @@
 currentTile = 0;
 currentTilePos = 0;
 currentRow = [];
+idCache = [];
 
 const secretWords = ["JAZZY", "OTHER", "THERE"];
 let secretWord = secretWords[Math.floor(Math.random() * secretWords.length)];
 console.log(secretWord);
 
 function cover(letter) {
-  tile = document.getElementById(getCurrentTile());
+  // cover() is the entry point for the key buttons
+  // the name "cover" is an anachronism from an old version of the code
   if (4 in currentRow) {
     snackbar(2);
     console.log(currentRow);
     return;
   } else {
+    id = getCurrentTile();
+    tile = document.getElementById(id);
+    idCache.push(id);
     currentRow.push(letter);
     tile.classList.add("cover");
     console.log(currentRow);
+    tile.innerHTML = letter;
   }
-  color = getTileColor(letter);
-  tile.classList.add("cover", color);
-  tile.innerHTML = letter;
-  //   getSecretWord();
 }
 
 function getCurrentTile() {
   if (currentTile < 30 && currentRow.length != 5) {
     currentTile++;
     return "tile" + currentTile;
-
-    //   } else {
-    //     currentTile = 1;
-    //     return "tile" + currentTile;
   }
 }
 
@@ -50,19 +48,25 @@ function getCurrentTilePos() {
 function getTileColor(guess) {
   guessState = checkGuess(guess);
   if (guessState === "green") {
-    return "color-green";
+    return "green";
   } else if (guessState === "yellow") {
-    return "color-yellow";
+    return "yellow";
   } else {
-    return "color-red";
+    return "red";
   }
 }
 
 function showRow() {
+  // This is the entry point for the ENTER key.
   if (4 in currentRow) {
-    let root = document.querySelector(":root");
-    root.style.setProperty("--opacity", 1);
+    for (i = 0; i < 5; i++) {
+      console.log(idCache, currentRow);
+      document.getElementById(idCache[i]).style.background = getTileColor(
+        currentRow[i]
+      );
+    }
     currentRow = [];
+    idCache = [];
   } else {
     snackbar(1);
   }

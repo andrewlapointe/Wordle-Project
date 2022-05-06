@@ -17,6 +17,7 @@
   margin: auto;
   justify-content: center;
   align-items: center;
+  grid-template-rows: repeat(6, 1fr);
 }
 
 .game-row {
@@ -35,21 +36,10 @@ tile {
   align-items: center;
   justify-content: center;
   font-size: x-large;
+  z-index: 2;
   /* color: white; */
 }
 
 .cover {
   background-color: white;
-}
-
-.color-red {
-  background: rgba(255, 0, 0, var(--opacity)); /*  0% opaque red */
-}
-
-.color-yellow {
-  background: rgba(255, 255, 0, var(--opacity)); /*  0% opaque yellow */
-}
-
-.color-green {
-  background: rgba(0, 255, 0, var(--opacity)); /*  0% opaque green */
 }
