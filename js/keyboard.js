@@ -2,6 +2,7 @@ currentTile = 0;
 currentTilePos = 0;
 currentRow = [];
 idCache = [];
+greenCounter = 0;
 
 const secretWords = ["JAZZY", "OTHER", "THERE"];
 let secretWord = secretWords[Math.floor(Math.random() * secretWords.length)];
@@ -56,33 +57,45 @@ function getTileColor(guess) {
   }
 }
 
-function showRow() {
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function showRow() {
   // This is the entry point for the ENTER key.
   if (4 in currentRow) {
     for (i = 0; i < 5; i++) {
-      console.log(idCache, currentRow);
+      //   console.log(idCache, currentRow);
       document.getElementById(idCache[i]).style.background = getTileColor(
         currentRow[i]
       );
     }
+    if (greenCounter === 5) {
+      console.log("yay");
+      snackbar(3);
+      await sleep(4000);
+      window.location.reload();
+    }
     currentRow = [];
     idCache = [];
+    greenCounter = 0;
   } else {
     snackbar(1);
   }
 }
 
 function checkGuess(guess) {
-  currentTilePos = getCurrentTilePos();
-  console.log(currentTilePos);
+  secretLetters = getSecretWord();
+  console.log(secretLetters);
   if (
-    getSecretWord().includes(guess) &&
-    getSecretWord().indexOf(guess) == currentTilePos - 1
+    secretLetters.includes(guess) &&
+    secretLetters.indexOf(guess) == currentRow.indexOf(guess)
   ) {
+    greenCounter++;
     return "green";
   } else if (
-    getSecretWord().includes(guess) &&
-    getSecretWord().indexOf(guess) != currentTilePos - 1
+    secretLetters.includes(guess) &&
+    secretLetters.indexOf(guess) != currentRow.indexOf(guess)
   ) {
     return "yellow";
   } else {
