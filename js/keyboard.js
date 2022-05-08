@@ -13035,7 +13035,6 @@ function getTileColor(guess) {
 
 function showRow() {
   // This is the entry point for the ENTER key.
-  console.log(currentRow.join("").toLowerCase());
   if (
     4 in currentRow &&
     secretWords.includes(currentRow.join("").toLowerCase())
@@ -13079,6 +13078,21 @@ function checkGuess(guess) {
     return "yellow";
   } else {
     return "red";
+  }
+}
+
+function deleteLetter() {
+  // This is the entry point for the DELETE key.
+  console.log(idCache[idCache.length - 1]);
+  if (currentRow.length > 0) {
+    lastTile = document.getElementById(idCache[idCache.length - 1]);
+    lastTile.innerHTML = " ";
+    idCache.pop();
+    currentRow.pop();
+    currentTilePos--;
+    currentTile--;
+  } else {
+    snackbar(5);
   }
 }
 
