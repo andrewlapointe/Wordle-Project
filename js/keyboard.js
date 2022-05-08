@@ -68,7 +68,7 @@ function showRow() {
     }
     if (greenCounter === 5) {
       console.log("yay");
-      menu();
+      showMenu();
     }
     currentRow = [];
     idCache = [];

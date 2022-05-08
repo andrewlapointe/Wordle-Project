@@ -15,6 +15,8 @@ This project served both as a way to learn JavaScript and as an exploration in w
 
 This web application is a recreation of the popular online game [Wordle](https://www.nytimes.com/games/wordle/index.html) by the New York times. The object of the game is to guess a five letter word in six guesses or less. After each guess the game will prompt the player with hints.
 
+A green square means that the letter is in the right place. Yellow indicates that the letter is in the word, but in the wrong place. If a square is red, the letter isn't anywhere in the word.
+
 ### Concepts Learned
 
 - accessing HTML elements
