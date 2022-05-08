@@ -51,3 +51,4 @@ The application was built in HTML CSS and JavaScript.
 - Backend (NodeJS) integration
 - Better UI (possible keyboard functionality)
 - Wordle solver
+- Delete Key
