@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="css/board.css" />
     <link rel="stylesheet" href="css/keyboard.css" />
     <link rel="stylesheet" href="css/snackbar.css" />
-    <title>Wordle</title>
+    <link rel="stylesheet" href="css/menu.css" />
+    <title>Weirdle</title>
   </head>
   <header>
     <div id="navbar" style="z-index: 10">
       <a href="index.html">Home</a>
-      <!-- <a href=""></a> -->
+      <a href="about.html">About</a>
       <!-- <a href=""></a> -->
       <button
-        onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';"
+        onclick="window.location.href='https://www.nytimes.com/games/wordle/index.html';"
         class="btn"
         style="z-index: 12"
       >
-        Patreon
+        Original
       </button>
     </div>
+
+    <!-- <div class="title">Weirdle</div> -->
   </header>
   <body>
     <div id="board-container">
@@ -130,10 +133,21 @@
         </div>
       </div>
     </div>
-    <!-- The actual snackbar -->
+    <div id="menu">
+      <p>You Solved it. Congratulations!!!</p>
+      <button class="menu-button" onclick="reload()">New Game</button>
+    </div>
+    <div id="welcome" class="menu">
+      <p>
+        Welcome to Weirdle! It's just wordle, but everything is a bit scuffed.
+      </p>
+      <button class="menu-button" onclick="hideMenu()">Lets Play!</button>
+    </div>
     <div id="snackbar"></div>
     <script src="js/snackbar.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/keyboard.js"></script>
+    <script type="module" src="js/secretWords.js"></script>
     <!-- async? -->
   </body>
 </html>

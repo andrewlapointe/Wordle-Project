@@ -1,0 +1,103 @@
+#menu {
+  box-sizing: border-box;
+  width: 200px;
+  height: 120px;
+  background-color: white;
+  visibility: hidden;
+  position: fixed; /* Sit on top of the screen */
+  left: 50%;
+  top: 40%;
+  margin-left: -100px;
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 12px; /* Padding */
+  z-index: 10; /* Add a z-index if needed */
+  border: black solid;
+  border-radius: 5px;
+}
+
+#welcome {
+  box-sizing: border-box;
+  width: 200px;
+  height: 140px;
+  background-color: white;
+  position: fixed; /* Sit on top of the screen */
+  left: 50%;
+  top: 40%;
+  margin-left: -100px;
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 12px; /* Padding */
+  z-index: 10; /* Add a z-index if needed */
+  border: black solid;
+  border-radius: 5px;
+}
+
+#menu.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+#welcome.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+  /* visibility: hidden;
+  -webkit-animation: fadeout 0.5s;
+  animation: fadeout 0.5s; */
+}
+
+button.menu-button {
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
