@@ -25,7 +25,7 @@ A green square means that the letter is in the right place. Yellow indicates tha
 - basic web application design
   {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running (starting the server and navigating through the web pages) and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/MjJIOhIonvA)
 
 # Web Pages
 
@@ -51,4 +51,3 @@ The application was built in HTML CSS and JavaScript.
 - Backend (NodeJS) integration
 - Better UI (possible keyboard functionality)
 - Wordle solver
-- Delete Key
