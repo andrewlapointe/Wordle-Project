@@ -10,7 +10,7 @@ function snackbar(a) {
   } else if (a === 3) {
     x.innerHTML = "You Win! Time to try again!";
   } else {
-    x.innerHTML = "Sorry! This form doesn't work yet.";
+    x.innerHTML = "Sorry! This doesn't work yet.";
   }
   // Add the "show" class to DIV
   x.className = "show";
