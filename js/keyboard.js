@@ -12979,6 +12979,7 @@ const secretWords = [
   "zygon",
   "zymes",
   "zymic",
+  "xxxxx",
 ];
 let secretWord =
   secretWords[Math.floor(Math.random() * secretWords.length)].toUpperCase();
@@ -12989,7 +12990,6 @@ function cover(letter) {
   // the name "cover" is an anachronism from an old version of the code
   if (4 in currentRow) {
     snackbar(2);
-    console.log(currentRow);
     return;
   } else {
     id = getCurrentTile();
@@ -12997,7 +12997,6 @@ function cover(letter) {
     idCache.push(id);
     currentRow.push(letter);
     tile.classList.add("cover");
-    console.log(currentRow);
     tile.innerHTML = letter;
   }
 }
@@ -13040,13 +13039,15 @@ function showRow() {
     secretWords.includes(currentRow.join("").toLowerCase())
   ) {
     for (i = 0; i < 5; i++) {
-      //   console.log(idCache, currentRow);
       document.getElementById(idCache[i]).style.background = getTileColor(
         currentRow[i]
       );
     }
     if (greenCounter === 5) {
-      console.log("yay");
+      showMenu();
+    } else if (currentTile >= 30) {
+      document.getElementById("menu-text").innerHTML =
+        "Game Over. The secret word was: " + secretWord;
       showMenu();
     }
     currentRow = [];
@@ -13064,7 +13065,6 @@ function showRow() {
 
 function checkGuess(guess) {
   secretLetters = getSecretWord();
-  console.log(secretLetters);
   if (
     secretLetters.includes(guess) &&
     secretLetters.indexOf(guess) == currentRow.indexOf(guess)
@@ -13083,7 +13083,6 @@ function checkGuess(guess) {
 
 function deleteLetter() {
   // This is the entry point for the DELETE key.
-  console.log(idCache[idCache.length - 1]);
   if (currentRow.length > 0) {
     lastTile = document.getElementById(idCache[idCache.length - 1]);
     lastTile.innerHTML = " ";

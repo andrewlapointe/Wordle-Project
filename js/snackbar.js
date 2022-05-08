@@ -1,4 +1,4 @@
-function snackbar(a) {
+function snackbar(a, secretWord) {
   // Get the snackbar DIV
   var x = document.getElementById("snackbar");
 
@@ -14,7 +14,7 @@ function snackbar(a) {
   } else if (a === 5) {
     x.innerHTML = "There is nothing to delete";
   } else if (a === 6) {
-    x.innerHTML = "Game Over";
+    x.innerHTML = "Game Over. The secret word was:" + secretWord;
   } else {
     x.innerHTML = "Not a valid guess";
   }
