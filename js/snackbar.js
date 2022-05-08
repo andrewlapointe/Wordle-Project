@@ -9,8 +9,14 @@ function snackbar(a) {
     x.innerHTML = "Press enter to check the row!";
   } else if (a === 3) {
     x.innerHTML = "You Win! Time to try again!";
+  } else if (a === 4) {
+    x.innerHTML = "Not a valid guess";
+  } else if (a === 5) {
+    x.innerHTML = "There is nothing to delete";
+  } else if (a === 6) {
+    x.innerHTML = "Game Over";
   } else {
-    x.innerHTML = "Sorry! This doesn't work yet.";
+    x.innerHTML = "Not a valid guess";
   }
   // Add the "show" class to DIV
   x.className = "show";
