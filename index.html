@@ -12,66 +12,67 @@
     <link rel="stylesheet" href="css/menu.css" />
     <title>Weirdle</title>
   </head>
-  <header>
-    <div id="navbar" style="z-index: 10">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <!-- <a href=""></a> -->
-      <button
-        onclick="window.location.href='https://www.nytimes.com/games/wordle/index.html';"
-        class="btn"
-        style="z-index: 12"
-      >
-        Original
-      </button>
-    </div>
 
-    <!-- <div class="title">Weirdle</div> -->
-  </header>
   <body>
+    <header>
+      <div id="navbar" style="z-index: 10">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- <a href=""></a> -->
+        <button
+          onclick="window.location.href='https://www.nytimes.com/games/wordle/index.html';"
+          class="btn"
+          style="z-index: 12"
+        >
+          Original
+        </button>
+      </div>
+
+      <!-- <div class="title">Weirdle</div> -->
+    </header>
     <div id="board-container">
       <div id="board">
         <game-row class="game-row">
-          <tile id="tile1"></tile>
-          <tile id="tile2"></tile>
-          <tile id="tile3"></tile>
-          <tile id="tile4"></tile>
-          <tile id="tile5"></tile>
+          <game-tile id="tile1"></game-tile>
+          <game-tile id="tile2"></game-tile>
+          <game-tile id="tile3"></game-tile>
+          <game-tile id="tile4"></game-tile>
+          <game-tile id="tile5"></game-tile>
         </game-row>
         <game-row class="game-row">
-          <tile id="tile6"></tile>
-          <tile id="tile7"></tile>
-          <tile id="tile8"></tile>
-          <tile id="tile9"></tile>
-          <tile id="tile10"></tile
+          <game-tile id="tile6"></game-tile>
+          <game-tile id="tile7"></game-tile>
+          <game-tile id="tile8"></game-tile>
+          <game-tile id="tile9"></game-tile>
+          <game-tile id="tile10"></game-tile
         ></game-row>
         <game-row class="game-row">
-          <tile id="tile11"></tile>
-          <tile id="tile12"></tile>
-          <tile id="tile13"></tile>
-          <tile id="tile14"></tile>
-          <tile id="tile15"></tile
+          <game-tile id="tile11"></game-tile>
+          <game-tile id="tile12"></game-tile>
+          <game-tile id="tile13"></game-tile>
+          <game-tile id="tile14"></game-tile>
+          <game-tile id="tile15"></game-tile
         ></game-row>
         <game-row class="game-row">
-          <tile id="tile16"></tile>
-          <tile id="tile17"></tile>
-          <tile id="tile18"></tile>
-          <tile id="tile19"></tile>
-          <tile id="tile20"></tile
+          <game-tile id="tile16"></game-tile>
+          <game-tile id="tile17"></game-tile>
+          <game-tile id="tile18"></game-tile>
+          <game-tile id="tile19"></game-tile>
+          <game-tile id="tile20"></game-tile
         ></game-row>
         <game-row class="game-row">
-          <tile id="tile21"></tile>
-          <tile id="tile22"></tile>
-          <tile id="tile23"></tile>
-          <tile id="tile24"></tile>
-          <tile id="tile25"></tile
+          <game-tile id="tile21"></game-tile>
+          <game-tile id="tile22"></game-tile>
+          <game-tile id="tile23"></game-tile>
+          <game-tile id="tile24"></game-tile>
+          <game-tile id="tile25"></game-tile
         ></game-row>
         <game-row class="game-row">
-          <tile id="tile26"></tile>
-          <tile id="tile27"></tile>
-          <tile id="tile28"></tile>
-          <tile id="tile29"></tile>
-          <tile id="tile30"></tile
+          <game-tile id="tile26"></game-tile>
+          <game-tile id="tile27"></game-tile>
+          <game-tile id="tile28"></game-tile>
+          <game-tile id="tile29"></game-tile>
+          <game-tile id="tile30"></game-tile
         ></game-row>
       </div>
     </div>
@@ -147,7 +148,7 @@
     <script src="js/snackbar.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/keyboard.js"></script>
-    <script type="module" src="js/secretWords.js"></script>
+    <script src="js/secretWords.js"></script>
     <!-- async? -->
   </body>
 </html>
