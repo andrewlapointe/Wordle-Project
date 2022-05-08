@@ -13035,9 +13035,10 @@ function getTileColor(guess) {
 
 function showRow() {
   // This is the entry point for the ENTER key.
+  console.log(currentRow.join("").toLowerCase());
   if (
     4 in currentRow &&
-    secretWords.includes(currentRow.join().toLowerCase())
+    secretWords.includes(currentRow.join("").toLowerCase())
   ) {
     for (i = 0; i < 5; i++) {
       //   console.log(idCache, currentRow);
@@ -13054,7 +13055,7 @@ function showRow() {
     greenCounter = 0;
   } else if (
     4 in currentRow &&
-    secretWords.includes(currentRow.join().toLowerCase()) == false
+    secretWords.includes(currentRow.join("").toLowerCase()) == false
   ) {
     snackbar(4);
   } else {
